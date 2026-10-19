@@ -1,5 +1,5 @@
 @font-face {
   font-family: 'SongTi';
-  src: url('/fonts/songti.ttf');
+  src: url('./songti.ttf') format('truetype');
   font-display: swap;
-} 
+}

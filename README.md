@@ -45,10 +45,23 @@ src/
 │  └─ InputBox.vue   # 内容录入：类型 / 朝代 / 诗名 / 作者 / 正文
 ├─ views/Home.vue    # 整屏页面：弹窗、提交处理、PNG 导出
 ├─ router/index.js   # 单页路由
-├─ assets/fonts.css  # @font-face 声明
+├─ assets/
+│  ├─ fonts.css      # @font-face 声明
+│  └─ songti.ttf     # 京華老宋体字体文件
 └─ main.js
-public/fonts/songti.ttf
 ```
+
+## 部署
+
+推送 `main` 即触发 GitHub Actions 自动构建并发布到 GitHub Pages：
+
+<https://bugdesigner-hy.github.io/SongCi/>
+
+项目页发布在 `/SongCi/` 子路径下，因此 `vite.config.js` 在构建时把 `base` 设为 `'/SongCi/'`，
+开发服务器仍使用 `'/'`。若改用自定义域名或用户名站点（`bugdesigner-hy.github.io`），
+需要把构建时的 `base` 改回 `'/'`。
+
+路由使用 hash 模式，无需额外的 404 回退配置，子路径下刷新、直达均正常。
 
 ## 授权说明
 
