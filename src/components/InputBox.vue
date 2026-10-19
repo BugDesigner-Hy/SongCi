@@ -29,7 +29,7 @@
               <span class="hit-author">{{ item.a }}</span>
               <span class="hit-line">{{ item.p[0] }}</span>
             </button>
-            <p v-if="!loaded" key="loading" class="empty">正在取词库…</p>
+            <p v-if="!loaded" key="loading" class="empty">{{ failed ? '词库没取到，可以直接在下面手写。' : '正在取词库…' }}</p>
           </TransitionGroup>
           <p v-if="results.length < matched.length" class="more">继续下拉，还有 {{ matched.length - results.length }} 首</p>
         </div>
@@ -49,7 +49,7 @@
 
 <script setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import { library, loaded, loadLibrary } from '../data/library'
+import { library, loaded, failed, loadLibrary } from '../data/library'
 import { displayTitle } from '../utils/typeset.js'
 
 const props = defineProps({
