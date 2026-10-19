@@ -1,13 +1,13 @@
 # 砚边
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-bugdesigner--hy.github.io%2FSongCi-6CA6CD?style=flat-square)](https://bugdesigner-hy.github.io/SongCi/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-bugdesigner--hy.github.io%2Fyanbian-6CA6CD?style=flat-square)](https://bugdesigner-hy.github.io/yanbian/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-e16c6c?style=flat-square)](LICENSE)
 [![Vue 3](https://img.shields.io/badge/Vue-3-42b883?style=flat-square)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-4-646cff?style=flat-square)](https://vitejs.dev/)
 
 > 坐在砚边，把一首唐诗、宋词或元曲，排成一张可以留下的诗笺。
 
-**在线预览：<https://bugdesigner-hy.github.io/SongCi/>**
+**在线预览：<https://bugdesigner-hy.github.io/yanbian/>**
 
 砚边是一张整屏诗笺。可以从开源词库里选一首唐诗、宋词或元曲，也可以自己写。
 换一首或自动换诗时，三种体裁随机出现：唐诗横排，宋词竖排，元曲横排。
@@ -71,9 +71,9 @@ src/
 
 推送 `main` 即触发 GitHub Actions 自动构建并发布到 GitHub Pages：
 
-<https://bugdesigner-hy.github.io/SongCi/>
+<https://bugdesigner-hy.github.io/yanbian/>
 
-页面名称是砚边。站点仍发布在 `/SongCi/` 子路径下，因此 `vite.config.js` 在构建时把 `base` 设为 `'/SongCi/'`，
+页面名称是砚边。站点仍发布在 `/yanbian/` 子路径下，因此 `vite.config.js` 在构建时把 `base` 设为 `'/yanbian/'`，
 开发服务器仍使用 `'/'`。若改用自定义域名或用户名站点（`bugdesigner-hy.github.io`），
 需要把构建时的 `base` 改回 `'/'`。
 

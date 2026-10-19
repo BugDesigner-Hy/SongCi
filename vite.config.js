@@ -48,8 +48,8 @@ export default defineConfig(({ command, mode }) => {
   const extension = mode === 'extension'
   return {
     plugins: [vue(), extension && emitExtensionManifest()].filter(Boolean),
-    // 网页发布在 /SongCi/；插件页从扩展自身打开，用相对路径
-    base: command === 'build' ? (extension ? './' : '/SongCi/') : '/',
+    // 网页发布在 /yanbian/；插件页从扩展自身打开，用相对路径
+    base: command === 'build' ? (extension ? './' : '/yanbian/') : '/',
     build: extension ? { outDir: 'extension', emptyOutDir: true } : undefined,
     server: {
       open: true
