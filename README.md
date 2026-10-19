@@ -1,6 +1,13 @@
 # 宋词卡片 · Songci Card
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-bugdesigner--hy.github.io%2FSongCi-6CA6CD?style=flat-square)](https://bugdesigner-hy.github.io/SongCi/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-e16c6c?style=flat-square)](LICENSE)
+[![Vue 3](https://img.shields.io/badge/Vue-3-42b883?style=flat-square)](https://vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-4-646cff?style=flat-square)](https://vitejs.dev/)
+
 > 把一首唐诗或宋词，一键排成一张可以保存、可以分享的水墨诗卡。
+
+**🔗 在线预览：<https://bugdesigner-hy.github.io/SongCi/>**（手机浏览效果最佳）
 
 一个纯前端的诗歌卡片生成器。输入诗名、朝代、作者与正文，页面以传统诗笺的版式渲染；
 底部叠加分层波动的水波背景，配色取中国传统色；点击诗句可随时改写，点右上角导出按钮
