@@ -298,7 +298,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 0.28em;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
   font-size: 17px;
   line-height: 1;
   color: #3a291c;

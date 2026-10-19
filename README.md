@@ -36,7 +36,7 @@
 | 路由 | Vue Router 4（hash 模式，便于静态托管） |
 | 导出 | html2canvas 1.4 |
 | 图形 | 原生 SVG 路径动画（requestAnimationFrame） |
-| 字体 | 京華老宋体（KingHwa OldSong，免费商用） |
+| 字体 | 京華老宋体（KingHwa OldSong，免费商用），子集化为 woff2 后约 3.6 MB |
 | 词库 | [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry)（MIT） |
 
 ## 快速开始
@@ -63,8 +63,10 @@ src/
 ├─ router/index.js   # 单页路由
 ├─ assets/
 │  ├─ fonts.css      # @font-face 声明
-│  └─ songti.ttf     # 京華老宋体字体文件
+│  └─ songti.woff2   # 京華老宋体子集，约 3.6 MB
 └─ main.js
+scripts/
+└─ subset-font.py   # 字体子集化，用法见「授权说明」
 public/
 ├─ data/library.json # 精简后的词库，约 3.3 MB，首次访问后走缓存
 └─ logo.png
@@ -90,7 +92,7 @@ public/
 
 - **字体**：界面字体采用**京華老宋体**（KingHwa OldSong）。作者声明免费商用，可嵌入软件与网页，
   但**不可单独作为字体文件出售**，请勿修改字形或传播改版文件。
-  字体文件较大（约 35 MB），如仅需本地调试可自行替换为系统字体。
+  仓库里放的是**子集**：只保留 GB2312 全部汉字、项目源码与词库里实际出现的字，共 7000 余字，woff2 约 3.6 MB（原件 34.9 MB）。字形坐标、字宽均未改动，只是删掉了用不到的字。子集外的生僻字会回退到系统宋体。需要重新生成时，把原版 京華老宋体2.002.ttf 放到手边，执行 python scripts/subset-font.py <原字体路径>。
 - **词库**：诗句选自 chinese-poetry，采用 MIT。
 - **代码**：采用 [MIT License](LICENSE)，可自由使用、修改、分发与商用，保留版权声明即可。
 - **范围**：MIT 仅覆盖源代码；字体遵循作者自身的授权声明，两者相互独立。

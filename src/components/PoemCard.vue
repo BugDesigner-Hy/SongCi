@@ -758,7 +758,7 @@ function placeGlyphs({ layout, title, byline, width, hFont, vFont, track, lineFa
 .stage {
   position: relative;
   width: 100%;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
   user-select: text;
 }
 .verses {
@@ -904,7 +904,7 @@ function placeGlyphs({ layout, title, byline, width, hFont, vFont, track, lineFa
   line-height: 1.4;
   letter-spacing: 0;
   white-space: nowrap;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
   pointer-events: none;
 }
 .author-tag-v {

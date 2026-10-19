@@ -784,7 +784,7 @@ function onWaveColorChange() {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
   color: #3a291c;
   line-height: 1;
   transform-origin: center center;
@@ -882,7 +882,7 @@ function onWaveColorChange() {
 }
 .fav-title {
   margin: 0 4px 12px;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
   font-size: 20px;
   font-weight: 500;
   color: #222;
@@ -910,7 +910,7 @@ function onWaveColorChange() {
   border: none;
   background: transparent;
   border-radius: 0;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
 }
 .fav-open:hover,
 .fav-open:focus,

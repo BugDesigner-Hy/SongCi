@@ -191,7 +191,7 @@ function onShow() {
 .ghost,
 .primary,
 .hit {
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
 }
 .type-row button {
   position: relative;
@@ -220,7 +220,7 @@ input, textarea {
   border-radius: 8px;
   border: 1px solid #bcd;
   padding: 10px;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
   margin-bottom: 10px;
   box-sizing: border-box;
   color: #222;
@@ -328,7 +328,7 @@ input, textarea {
   padding: 16px 12px;
   color: #888;
   font-size: 14px;
-  font-family: 'SongTi', serif;
+  font-family: 'SongTi', 'Songti SC', 'STSong', 'SimSun', serif;
 }
 .more {
   text-align: center;
