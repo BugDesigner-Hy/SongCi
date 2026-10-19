@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "把唐诗宋词排成水墨诗卡并导出 PNG 的 Vue 3 网页应用",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
