@@ -1,12 +1,13 @@
 {
-  "name": "songci-card",
+  "name": "yanbian",
   "version": "1.0.0",
   "private": true,
-  "description": "把唐诗宋词排成水墨诗卡并导出 PNG 的 Vue 3 网页应用",
+  "description": "砚边：把唐诗、宋词、元曲排成可保存的诗笺",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:ext": "vite build --mode extension",
     "serve": "vite preview"
   },
   "dependencies": {
