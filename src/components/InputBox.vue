@@ -29,7 +29,7 @@
               <span class="hit-author">{{ item.a }}</span>
               <span class="hit-line">{{ item.p[0] }}</span>
             </button>
-            <p v-if="!matched.length" key="empty" class="empty">词库里没有这句，可以在下面自己写。</p>
+            <p v-if="!loaded" key="loading" class="empty">正在取词库…</p>
           </TransitionGroup>
           <p v-if="results.length < matched.length" class="more">继续下拉，还有 {{ matched.length - results.length }} 首</p>
         </div>
@@ -49,7 +49,7 @@
 
 <script setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import library from '../data/library.json'
+import { library, loaded, loadLibrary } from '../data/library'
 import { displayTitle } from '../utils/typeset.js'
 
 const props = defineProps({
@@ -66,6 +66,7 @@ const tabIndex = computed(() => Math.max(0, types.indexOf(inputType.value)))
 
 onMounted(() => {
   if (window.matchMedia('(pointer: fine)').matches) searchRef.value?.focus()
+  loadLibrary().catch(() => {})
 })
 
 function selectType(item) {

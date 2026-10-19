@@ -59,12 +59,15 @@ src/
 │  └─ InputBox.vue   # 词库选择与手写
 ├─ views/Home.vue    # 整屏页面：工具栏、复制、保存图片
 ├─ utils/typeset.js  # 唐诗、宋词、元曲的断行与分片
-├─ data/library.json # 精简后的词库
+├─ data/library.js   # 词库运行时加载，不进主包
 ├─ router/index.js   # 单页路由
 ├─ assets/
 │  ├─ fonts.css      # @font-face 声明
 │  └─ songti.ttf     # 京華老宋体字体文件
 └─ main.js
+public/
+├─ data/library.json # 精简后的词库，约 3.3 MB，首次访问后走缓存
+└─ logo.png
 ```
 
 ## 部署

@@ -186,7 +186,7 @@ import PoemCard from '../components/PoemCard.vue'
 import WaveBg from '../components/WaveBg.vue'
 import InputBox from '../components/InputBox.vue'
 import { displayTitle, layoutPoem } from '../utils/typeset.js'
-import library from '../data/library.json'
+import { library, loadLibrary } from '../data/library'
 
 const captureRef = ref(null)
 const brandSrc = `${import.meta.env.BASE_URL}logo.png`
@@ -520,7 +520,12 @@ function toggleAuto() {
 
 const layoutOf = { 唐诗: 'h', 宋词: 'v', 元曲: 'h' }
 
-function anotherPoem() {
+async function anotherPoem() {
+  try {
+    await loadLibrary()
+  } catch {
+    return
+  }
   const types = ['唐诗', '宋词', '元曲'].filter((type) => (library[poolOf[type]] || []).length)
   if (!types.length) return
   let type = types[Math.floor(Math.random() * types.length)]
@@ -638,6 +643,7 @@ function onInputShow(val) {
 onMounted(() => {
   document.body.style.overflow = 'hidden'
   window.addEventListener('keydown', onKeydown)
+  loadLibrary().catch(() => {})
 })
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', onKeydown)
