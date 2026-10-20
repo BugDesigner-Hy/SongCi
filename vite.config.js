@@ -10,7 +10,7 @@ const extensionManifest = {
   manifest_version: 3,
   name: '砚边',
   description: '每次新建标签，先看见一首诗。',
-  version: '1.0.0',
+  version: '1.0.1',
   chrome_url_overrides: {
     newtab: 'index.html'
   },

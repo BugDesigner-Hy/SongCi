@@ -262,7 +262,7 @@ function toggleTools() {
     // 隐私模式写不进时，这一次的收放只留在当前页
   }
 }
-const autoPlay = ref(false)
+const autoPlay = ref(true)
 let copiedTimer = 0
 let savedTimer = 0
 let autoTimer = 0
@@ -644,6 +644,7 @@ onMounted(() => {
   document.body.style.overflow = 'hidden'
   window.addEventListener('keydown', onKeydown)
   loadLibrary().catch(() => {})
+  scheduleAuto()
 })
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', onKeydown)
